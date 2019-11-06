@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+    <meta charset="UTF-8">
+        <title>Dong Hae Korean Grill & Sushi</title>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: white;
+        }
+
+        nav {
+            height: 100px;
+            background-color: rgba(255, 255, 255, 255);
+            margin: 0 auto;
+            padding-top: 10px;
+            position: fixed;
+            width: 1300px;
+            z-index: 100;
+        }
+
+        .wrapper {
+            width: 1350px;
+            background-color: white;
+            position: relative;
+            margin: 0 auto;
+        }
+
+        #section-01, #section-03 {
+            width: 1300px;
+            height: 800px;
+            background-color: white;
+            color: black;
+            margin: auto;
+        }
+
+        #section-02, #section-04 {
+            width: 1300px;
+            height: 800px;
+            position: relative;
+            background-color: white;
+            padding-top: 10px;
+            color: black;
+            margin: 0 auto;
+        }
+
+        #section-01 {
+            background-image: url("bibimbap.jpg");
+        }
+
+        .logo {
+            display: inline;
+        }
+
+        .navigation {
+            display: inline;
+        }
+
+        a:link {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:visited {
+            text-decoration: none;
+            color: black;
+        }
+
+        a:hover {
+            text-decoration: none;
+            color: #FF7000;
+        }
+
+        a:active {
+            text-decoration: none;
+            color: deepskyblue;
+        }
+
+        a:hover {
+            cursor: pointer;
+        }
+
+        .footer {
+            position: absolute;
+            bottom: 25px;
+            left: 50px;
+            scroll-behavior: smooth;
+        }
+
+        .h2 {
+            font-family: "Bodoni 72 Smallcaps", "Times New Roman", Serif;
+            font-size: 50px;
+            position: absolute;
+            right: 250px;
+            top: 1px;
+            /*padding-left: 900px;*/
+        }
+
+        .h3 {
+            font-family: "Bodoni 72 Smallcaps", "Times New Roman", Serif;
+            font-size: 50px;
+            position: absolute;
+            padding-left: 180px;
+        }
+
+        .h4 {
+            font-family: "Bodoni 72 Smallcaps", "Times New Roman", Serif;
+            font-size: 50px;
+            position: absolute;
+            right: 195px;
+        }
+
+        .h5 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 18px;
+            position: absolute;
+            left: 745px;
+            top: 100px;
+        }
+
+        .h6 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 18px;
+            position: absolute;
+            left: 1140px;
+            top: 100px;
+        }
+
+        .h7 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 18px;
+            position: absolute;
+            left: 927px;
+            top: 100px;
+        }
+
+        button {
+            width: 200px;
+            height: 40px;
+            background-color: transparent;
+            font-family: "Avenir Next Condensed", "Arial", sans-serif;
+            font-size: 25px;
+            border: 0px;
+        }
+
+        .box {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 420px;
+            top: 130px;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 420px;
+            top: 300px;
+        }
+
+        .box3 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 420px;
+            top: 430px;
+        }
+
+        .box4 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 25px;
+            top: 130px;
+        }
+
+        .box5 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 25px;
+            top: 400px;
+        }
+
+        .box6 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 25px;
+            top: 650px;
+        }
+
+        .box7 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 80px;
+            top: 1720px;
+        }
+
+        .box8 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 390px;
+            top: 1720px;
+        }
+
+        .box9 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            left: 230px;
+            top: 2170px;
+        }
+
+        .box10 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 370px;
+            top: 110px;
+        }
+
+        .box11 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 100px;
+            top: 110px;
+        }
+
+        .box12 {
+            width: 200px;
+            height: 40px;
+            background-color: #FF7000;
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            color: white;
+            font-size: 12px;
+            text-align: center;
+            line-height: 40px;
+            position: absolute;
+            right: 230px;
+            top: 290px;
+        }
+
+        .p {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 700px;
+            top: 180px;
+        }
+
+        .p2 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 700px;
+            top: 350px;
+        }
+
+        .p3 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 700px;
+            top: 480px;
+        }
+
+        .p4 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 900px;
+            top: 130px;
+        }
+
+        .p5 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            position: absolute;
+            left: 1090px;
+            top: 180px;
+        }
+
+        .p6 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 1090px;
+            top: 450px;
+        }
+
+        .p7 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 1090px;
+            top: 700px;
+        }
+
+        .p8 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 100px;
+            top: 1770px;
+        }
+
+        .p9 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 415px;
+            top: 1770px;
+        }
+
+        .p10 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            left: 250px;
+            top: 2220px;
+        }
+
+        .p12 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            right: 390px;
+            top: 160px;
+        }
+
+        .p13 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            right: 120px;
+            top: 160px;
+        }
+
+        .p14 {
+            font-family: "Avenir Next", "Arial", SANS-Serif;
+            font-size: 14px;
+            position: absolute;
+            right: 220px;
+            top: 340px;
+        }
+
+        .icons {
+            text-align: left;
+            display: inline;
+            position: relative;
+            margin-right: 15px;
+            margin-top: 25px;
+            float: right;
+            padding-left: 200px;
+        }
+
+        .navtext {
+            display: inline;
+            position: absolute;
+            top: 30px;
+        }
+
+        .images1 {
+            width: 650px;
+            height: 800px;
+        }
+
+        .images2 {
+            width: 650px;
+            height: 800px;
+            float: right;
+        }
+
+        .images3 {
+            width: 650px;
+            float: left;
+        }
+        .socialmedia {
+            margin-right: 22px;
+            margin-bottom: 1px;
+        }
+        .socialmedia2 {
+            margin-right: 17px;
+        }
+
+    </style>
+</head>
+<body>
+<div class="wrapper">
+    <section id="section-01">
+        <nav>
+            <a href="home.html">
+                <div class="logo"><img src="logo.png"></logo></div>
+            </a>
+            <div class="navtext">
+                <a href="home.html">
+                    <button class="navigation">EAT</button>
+                </a>
+                <a href="home.html#section-04">
+                    <button class="navigation">DRINK</button>
+                </a>
+                <a href="aboutus.html">
+                    <button class="navigation">ABOUT US</button>
+                </a>
+                <a href="contact_visit.html">
+                    <button class="navigation">CONTACT/VISIT</button>
+                </a>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com/donghaeres/" target="_blank"><img class="socialmedia" src="fb.png"></a>
+                <a href="https://www.instagram.com/donghaemn/" target="_blank"><img class="socialmedia2" src="instagram.png"></a>
+                <a href="https://www.yelp.com/biz/dong-hae-korean-grill-and-sushi-minneapolis" target="_blank"><img
+                        class="socialmedia" src="yelp.png"></a></div>
+        </nav>
+    </section>
+    <section id="section-02">
+        <div class="images1">
+            <img src="bulgogi.jpg">
+            <br>
+            <img src="sidedishes.jpg">
+        </div>
+        <div class="h2"><h2>E A T</h2></div>
+        <div class="h5"></p>LUNCH</p></div>
+        <div class="h6"></p>DINNER</p></div>
+        <div class="box">KITCHEN BENTO OPTIONS</div>
+        <div class="p">9.99 BULGOGI
+            <br>9.99 DAEJI BULGOGI
+            <br>9.99 DAK BULGOGI
+            <br>9.99 DAK KALBI
+            <br>13.99 GALBI-GUI
+            <br>9.99 JAPCHAE
+        </div>
+        <div class="box2">SUSHI BENTO OPTIONS</div>
+        <div class="p2">15.00 MARGURO
+            <br>15.00 SALMON
+            <br>15.00 HAMACHI
+            <br>17.00 COMBO
+        </div>
+        <div class="box3">LUNCH SPECIALS</div>
+        <div class="p3">12.00+ STIR-FRIED LUNCH
+            <br> 9.99 DOLSOT BIBIMBAP
+            <br> 9.99 JEYUK-BOKKEUM
+            <br> 9.99 HAEMUL-DUPBAP
+            <br> 9.99 MAPA TOFU-DUPBAP
+            <br> 9.99 SOONDUBU JIGGAE
+            <br> 12.00+ YAKISOBA
+            <br> 12.00+ TERIYAKI
+        </div>
+        <div class="h7"></p>APPETIZERS</p></div>
+        <div class="p4">7.00 MANDU
+            <br>9.00 TOPPOKI
+            <br>15.00 HAEMUL<br>TOKKOPI
+            <br>6.00 KIMCHI JEON
+            <br>14.00 HAEMUL PAJEON
+            <br>6.00 KOREAN STYLE <br> CHICKEN WINGS
+            <br> 5.00 AGEDASHI TOFU
+            <br>8.00 DAEJI BULGOGI
+            <br>6.50 DAK BULGOGI
+            <br>10.00 DAK KALBI
+            <br>8.00 GALBI-GUI
+            <br>4.00 JAPCHAE
+        </div>
+        <div class="box4">SOUPS & SALADS</div>
+        <div class="p5">2.00 MISO SOUP
+            <br>3.00 KAISO SALAD
+            <br>3.50 SUNOMONO SALAD
+            <br>6.50 TAK SUNOMONO <br>SALAD
+            <br>6.50 KANI SUNOMONO <br>SALAD
+            <br>6.50 EBI SUNOMONO <br>SALAD
+            <br>10.00 SASHIMI SALAD
+            <br>2.00 STEAMED RICE
+        </div>
+        <div class="box5">HOT POTS / STIR FRY</div>
+        <div class="p6">38.00 AGU-JJIM HOT POT
+            <br>38.00 HAEMUL-JEONGOL <br>HOT POT
+            <br>38.00 BULNAC-JEONGOL <br>HOT POT
+            <br>28.00 BUDAE-JIGGAE <br>HOT POT
+            <br>14.00 JAPCHAE
+            <br>14.00 JEYUK-BOKKEUM
+            <br>14.00 OJINGEO-BOKKEUM
+        </div>
+        <div class="box6">RICE & NOODLES</div>
+        <div class="p7">12.00 BIBIMBAP
+            <br>12.00 BOKKEUM BAP
+            <br>14.00 JJAMPONG
+            <br>12.00+ JAJANGMYEON
+        </div>
+    </section>
+    <section id="section-03">
+        <div class="h3"><h2>S U S H I</h2></div>
+        <div class="images2">
+            <img src="sushi4.jpg">
+            <br>
+            <img src="sushi6.jpg"></div>
+        <div class="box7">NIGRI & SASHIMI</div>
+        <div class="p8">5.25+ MAGURO
+            <br> 5.25+ HAMACHIP
+            <br>4.95+ SAKE
+            <br>5.95+ SOCKEYE
+            <br>5.95+ MUTSU
+            <br>4.50+ TAI
+            <br>4.95+ EBI
+            <br>6.25+ AMA EBI
+            <br>4.95+ TAKO
+            <br>4.75+ IKA
+            <br>5.50+ KANI
+            <br>4.50+ SABA
+            <br>3.95 INARI
+            <br>3.95+ TAMAGO
+            <br>5.75+ UNAGI
+            <br>4.95+ HOKKIGAI
+            <br>5.95+ HOTATEGAI
+            <br>4.95+ TOBIKO
+            <br>5.25+ WASABI TOBIKO
+            <br>5.25+ BLACK TOBIKO
+            <br>5.50+ IKURA
+            <br>7.25+ UNI
+        </div>
+        <div class="box8">SPECIALTY ROLLS</div>
+        <div class="p9"> 7.25 SPICY TUNA ROLL
+            <br> 7.25 SPICY SALMON ROLL
+            <br> 7.25 DYNAMITE ROLL
+            <br> 8.25 TEMPURA SHRIMP ROLL
+            <br> 11.95 SPIDER ROLL
+            <br> 6.95 FUTO ROLL
+            <br> 7.50 PHILLY ROLL
+            <br> 6.75 CALIFORNIA ROLL
+            <br> 15.95 RAINBOW ROLL
+            <br> 15.95 DONGHAE ROLL
+            <br> 12.95 KOREAN GIMBAP ROLL
+            <br> 14.95 NEW YORK ROLL
+            <br> 14.95 DRAGON ROLL
+            <br> 14.95 NUMBER 9 ROLL
+            <br> 15.95 WINTER ROLL
+            <br> 10.95 VEGE-WINTER ROLL
+            <br> 11.50 CATERPILLAR ROLL
+            <br> 14.95 CRUNCHY ROLL
+            <br> 14.95 WASABI CRUNCHY ROLL
+        </div>
+        <div class="box9">SUSHI PLATTERS</div>
+        <div class="p10">20.00 REGULAR SUSHI PLATTER
+            <br>25.00 DELUXE SUSHI PLATTER
+            <br>27.00 SASHIMI PLATTER
+            <br>15.00 VEGETARIAN SUSHI PLATTER
+            <br>85.00 OMAKASE PLATTER FOR 2
+            <br>16.00 K-STYLE CHIRASHI SUSHI PLATTER
+        </div>
+    </section>
+    <section id="section-04">
+        <div class="images3"><img src="drinks4_soju.jpg">
+            <br>
+            <img src="drinks2.jpg"></div>
+        <div class="h4"><h2>D R I N K</h2></div>
+        <div class="box10">MOCKTAILS</div>
+        <div class="p12">6.50 DONG HAE SUNSET
+            <br> 4.00 SHIRLEY TEMPLE
+            <br> 3.50 HALF AND HALF
+            <br> 6.00 MOMIGI
+            <br> 5.00 BELLE-BELLE
+        </div>
+        <div class="box11">BEVERAGES</div>
+        <div class="p13">3.50+ BOBA TEA
+            <br> 4.00 THAI TEA
+            <br>3.00 SPARKLING WATER
+            <br>3.00 SOFT DRINKS
+            <br>3.00 HERBAL TEA
+            <br>3.00 MILKIS
+        </div>
+        <div class="box12">ALCOHOL</div>
+        <div class="p14">3.00 DOMESTIC BEERS
+            <br> 3.50 PREMIUM BEERS
+            <br>6.50 TEQUILA
+            <br>7.00 VODKA
+            <br>5.00 SELECTED WINES
+            <br>10.00 SMALL SOJU
+            <br>19.99 LARGE SOJU
+            <br>4.00 SMALL SAKE
+            <br>6.00 LARGE SAKE
+            <br>16.00 SMALL SAKE
+            <br>4.00/6.00 CALI SAKE DRY
+            <br>4.50 HARD CIDER
+            <br>4.00 COCKTAILS (SELECTED)
+            <br>5.50 MARTINIS
+            <br>5.00 SMALL SHO CHIKU BAI
+            <br>7.00 LARGE SHO CHIKU BAI
+            <br>6.00 SOGARITA
+        </div>
+    </section>
+
+</div><!-- End of wrapper -->
+<script>
+    $(document).ready(function () {
+// Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+// Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+// Prevent default anchor click behavior
+                event.preventDefault();
+
+// Store hash
+                var hash = this.hash;
+
+// Using jQuery's animate() method to add smooth page scroll
+// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+// Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+</body>
+</html>
